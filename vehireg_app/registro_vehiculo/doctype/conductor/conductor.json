@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:numero_cedula",
+ "creation": "2025-02-14 15:19:00.174597",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "nombres",
+  "apellidos",
+  "column_break_vwne",
+  "numero_cedula",
+  "tipo_licencia"
+ ],
+ "fields": [
+  {
+   "fieldname": "nombres",
+   "fieldtype": "Data",
+   "label": "Nombres"
+  },
+  {
+   "fieldname": "apellidos",
+   "fieldtype": "Data",
+   "label": "Apellidos"
+  },
+  {
+   "fieldname": "column_break_vwne",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "numero_cedula",
+   "fieldtype": "Data",
+   "label": "Numero cedula",
+   "unique": 1
+  },
+  {
+   "fieldname": "tipo_licencia",
+   "fieldtype": "Select",
+   "label": "Tipo licencia",
+   "options": "\nE\nB\nD"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-14 15:25:54.353251",
+ "modified_by": "Administrator",
+ "module": "Registro vehiculo",
+ "name": "Conductor",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "numero_cedula,nombres,apellidos",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "numero_cedula"
+}

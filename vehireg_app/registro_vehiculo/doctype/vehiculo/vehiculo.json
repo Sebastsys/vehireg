@@ -1,0 +1,69 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:placa",
+ "creation": "2025-02-14 15:17:15.247143",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "placa",
+  "numero_vehiculo",
+  "column_break_vwht",
+  "marca",
+  "modelo"
+ ],
+ "fields": [
+  {
+   "fieldname": "placa",
+   "fieldtype": "Data",
+   "label": "Placa",
+   "unique": 1
+  },
+  {
+   "fieldname": "numero_vehiculo",
+   "fieldtype": "Data",
+   "label": "Numero Vehiculo"
+  },
+  {
+   "fieldname": "marca",
+   "fieldtype": "Data",
+   "label": "Marca"
+  },
+  {
+   "fieldname": "modelo",
+   "fieldtype": "Data",
+   "label": "Modelo"
+  },
+  {
+   "fieldname": "column_break_vwht",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-14 15:18:43.733141",
+ "modified_by": "Administrator",
+ "module": "Registro vehiculo",
+ "name": "Vehiculo",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "placa,marca",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "placa"
+}
