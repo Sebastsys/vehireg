@@ -12,22 +12,53 @@ def get_vehiculos(placa):
 	return {"status": "success", "data": data}
 
 @frappe.whitelist(allow_guest=True)
-def news_preview():
-	data = frappe.db.sql(""" SELECT tn.name, tn.titulo, tn.resumen, tn.categoria, tn.referencia, tn.autor, tn.imagen, tn.modified 	
-FROM tabNews tn
-WHERE tn.publicado =1 """, as_dict=1)
+def get_conductores():
+	data = frappe.db.sql(""" SELECT tc.nombres,tc.apellidos,tc.tipo_licencia,tc.numero_cedula 	
+FROM tabConductor tc """, as_dict=1)
 	return {"status": "success", "data": data}
 
 @frappe.whitelist(allow_guest=True)
-def publicidad():
-	data = frappe.db.sql(""" SELECT tp.empresa, tp.publicidad_full ,tp.publicidad_horizontal,tp.publicidad_vertical ,tp.publicidad_opcional ,tp.url, tp.whatsapp
-FROM tabPublicidad tp """, as_dict=1)
-	return {"status": "success", "data": data}
+def obtener_registro_salida(placa_vehiculo):
+    # Buscar registros en tabRegistroKM donde la placa coincide
+    # y hay una fecha de salida pero no hay fecha de ingreso
+	values = {'placa': placa_vehiculo}
+	registros = frappe.db.sql(""" SELECT tr.name,tr.fecha_salida,tr.kilometraje_salida 
+	from tabRegistroKM tr 
+	where tr.vehiculo=%(placa)s and
+	tr.fecha_salida IS NOT NULL and
+	tr.fecha_ingreso IS NULL """,values=values, as_dict=1)
+	
+    # Si hay registros que cumplen con la condición, devolver el último
+	if registros:
+		return registros[-1]  # Devuelve el último registro encontrado
+	else:
+		return None  # No se encontraron registros
 
 @frappe.whitelist(allow_guest=True)
-def publicidadLigas(liga):
-	values = {'name': liga}
-	data = frappe.db.sql(""" SELECT tl.name, tl.nombre, tl.empresa, tl.url, tl.whatsapp, tl.publicidad_horizontal,tl.publicidad_horizontal1 
-FROM tabLiga tl 
-WHERE tl.name= %(name)s """, values=values,as_dict=1)
-	return {"status": "success", "data": data}
+def insert_regvehiculo(placa_vehiculo,conductor,fecha_salida,hora_salida,km_salida):
+    # Buscar registros en tabRegistroKM donde la placa coincide
+    # y hay una fecha de salida pero no hay fecha de ingreso
+	nuevo_registro = frappe.get_doc({
+        "doctype": "RegistroKM",
+        "vehiculo": placa_vehiculo,
+        "conductor": conductor,
+        "fecha_salida": fecha_salida,
+        "hora_salida": hora_salida,
+        "kilometraje_salida": km_salida
+    })
+	nuevo_registro.insert()
+	return nuevo_registro.name
+
+
+@frappe.whitelist(allow_guest=True)
+def update_regvehiculo(name,fecha_ingreso,hora_ingreso,km_ingreso):
+    # Buscar registros en tabRegistroKM donde la placa coincide
+    # y hay una fecha de salida pero no hay fecha de ingreso
+	values = {'name': name,"fecha_ingreso":fecha_ingreso, "hora_ingreso":hora_ingreso, "km_ingreso":km_ingreso}
+	registros = frappe.db.sql(""" UPDATE tabRegistroKM tr
+	set tr.fecha_ingreso=%(fecha_ingreso)s,
+	tr.hora_ingreso=%(hora_ingreso)s,
+	tr.kilometraje_ingreso=%(km_ingreso)s
+	where  tr.name=%(name)s """,values=values, as_dict=1)
+	
+	return registros

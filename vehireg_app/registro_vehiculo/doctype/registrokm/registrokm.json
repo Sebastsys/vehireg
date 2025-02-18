@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:RKV-.YYYY.-{#######}",
+ "autoname": "format:RKV-{YYYY}-{#######}",
  "creation": "2025-02-14 15:20:25.763115",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -76,7 +76,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-14 15:27:01.420373",
+ "modified": "2025-02-18 01:17:54.612616",
  "modified_by": "Administrator",
  "module": "Registro vehiculo",
  "name": "RegistroKM",
