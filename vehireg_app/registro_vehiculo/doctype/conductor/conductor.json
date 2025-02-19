@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:numero_cedula",
  "creation": "2025-02-14 15:19:00.174597",
@@ -16,11 +17,15 @@
   {
    "fieldname": "nombres",
    "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
    "label": "Nombres"
   },
   {
    "fieldname": "apellidos",
    "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
    "label": "Apellidos"
   },
   {
@@ -30,6 +35,8 @@
   {
    "fieldname": "numero_cedula",
    "fieldtype": "Data",
+   "in_filter": 1,
+   "in_standard_filter": 1,
    "label": "Numero cedula",
    "unique": 1
   },
@@ -37,12 +44,12 @@
    "fieldname": "tipo_licencia",
    "fieldtype": "Select",
    "label": "Tipo licencia",
-   "options": "\nE\nB\nD"
+   "options": "\nE\nB\nD\nC"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-14 15:25:54.353251",
+ "modified": "2025-02-18 12:15:31.877748",
  "modified_by": "Administrator",
  "module": "Registro vehiculo",
  "name": "Conductor",
