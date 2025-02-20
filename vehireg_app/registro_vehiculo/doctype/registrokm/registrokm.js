@@ -14,7 +14,7 @@ frappe.ui.form.on("RegistroKM", {
         // Hacer que los campos de ingreso sean solo lectura al cargar
         console.log("carga kmsalida:",frm.doc.kilometraje_salida);
 
-        if (frm.doc.kilometraje_salida) {
+        if (frm.doc.kilometraje_salida && !frm.doc.kilometraje_salida) {
             frm.set_df_property('vehiculo', 'read_only', 1);
             frm.set_df_property('conductor', 'read_only', 1);
             frm.set_df_property('fecha_ingreso', 'read_only', 1);

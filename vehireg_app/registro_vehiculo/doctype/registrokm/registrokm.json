@@ -22,6 +22,9 @@
   {
    "fieldname": "vehiculo",
    "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Vehiculo",
    "options": "Vehiculo"
   },
@@ -32,6 +35,9 @@
   {
    "fieldname": "conductor",
    "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Conductor",
    "options": "Conductor"
   },
@@ -64,13 +70,13 @@
    "fieldname": "fecha_ingreso",
    "fieldtype": "Date",
    "label": "Fecha Ingreso",
-   "read_only": 0
+   "read_only": 1
   },
   {
    "fieldname": "hora_ingreso",
    "fieldtype": "Time",
    "label": "Hora Ingreso",
-   "read_only": 0
+   "read_only": 1
   },
   {
    "fieldname": "kilometraje_ingreso",
@@ -80,7 +86,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-19 22:54:02.894134",
+ "modified": "2025-02-20 01:21:12.352962",
  "modified_by": "Administrator",
  "module": "Registro vehiculo",
  "name": "RegistroKM",
