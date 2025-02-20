@@ -1,0 +1,745 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-19 17:26:11.306139",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "documentos_column",
+  "docs_sticker",
+  "docs_matricula",
+  "column_break_pxao",
+  "logosid_posterior",
+  "logosid_izquierdo",
+  "logosid_derecho",
+  "column_break_mska",
+  "numid_posterior",
+  "numid_izquierdo",
+  "numid_derecho",
+  "section_break_pyrg",
+  "column_break_yyxt",
+  "colum_emergencia",
+  "emerg_trian",
+  "emerg_cono",
+  "emerg_extin",
+  "emerg_boti",
+  "colum_herramien",
+  "herra_rued",
+  "herra_mixt",
+  "herra_coro",
+  "herra_boca",
+  "herra_loro",
+  "herra_desto",
+  "herra_playo",
+  "herra_gata",
+  "herra_palan",
+  "column_accesor",
+  "acce_radio",
+  "acce_guant",
+  "acce_moque",
+  "acce_parizq",
+  "acce_pardere",
+  "acce_encen",
+  "acce_ceni",
+  "acce_ante",
+  "acce_emble",
+  "acce_combus",
+  "acce_radiad",
+  "acce_pludere",
+  "acce_pluizqu",
+  "acce_tapacei",
+  "acce_bayo",
+  "section_break_woyy",
+  "column_break_roam",
+  "column_vidrios",
+  "elevid_deldere",
+  "elevid_delizq",
+  "elevid_postdere",
+  "elevid_postizqu",
+  "column_cintu",
+  "cintu_deldere",
+  "cintu_delizqu",
+  "cintu_postdere",
+  "cintu_postizqu",
+  "cintu_postcent",
+  "column_visores",
+  "viso_dere",
+  "viso_izqu",
+  "viso_inter",
+  "section_break_hnhr",
+  "column_break_hnvg",
+  "columm_tapiz",
+  "tapi_delan",
+  "tapi_post",
+  "tapi_piso",
+  "column_brisas",
+  "bris_frontal",
+  "bris_poster",
+  "bris_puertas",
+  "column_faros",
+  "faro_deldere",
+  "faro_delizqu",
+  "faro_postdere",
+  "faro_postizqu",
+  "faro_nebli",
+  "faro_salon",
+  "section_break_vyou",
+  "column_break_ncdd",
+  "column_pintcar",
+  "pintcar_capot",
+  "pintcar_techo",
+  "pintcar_laddere",
+  "pintcar_ladizqu",
+  "pintcar_ladpost",
+  "pintcar_guarda",
+  "column_neuma",
+  "delantero_derecho",
+  "delantero_izquierdo",
+  "posterior_derecho",
+  "posterio_izquierdo",
+  "llanta_de_emergencia",
+  "rin_neumaticos",
+  "column_manij",
+  "manij_derext",
+  "manij_derinter",
+  "manij_izquexte",
+  "manij_izquinter",
+  "manij_postderext",
+  "manij_postdereint",
+  "manij_postizquext",
+  "manij_postizqinte",
+  "manij_postcaj",
+  "section_break_uivu",
+  "observaciones"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_pxao",
+   "fieldtype": "Column Break",
+   "label": "LOGOTIPOS DE IDENTIFICACI\u00d3N"
+  },
+  {
+   "fieldname": "column_break_mska",
+   "fieldtype": "Column Break",
+   "label": "NUMEROS DE IDENTIFICACION"
+  },
+  {
+   "fieldname": "documentos_column",
+   "fieldtype": "Column Break",
+   "label": "DOCUMENTOS"
+  },
+  {
+   "fieldname": "logosid_posterior",
+   "fieldtype": "Select",
+   "label": "POSTERIOR",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "logosid_izquierdo",
+   "fieldtype": "Select",
+   "label": "IZQUIERDO",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "logosid_derecho",
+   "fieldtype": "Select",
+   "label": "DERECHO",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "docs_sticker",
+   "fieldtype": "Select",
+   "label": "STICKER",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "docs_matricula",
+   "fieldtype": "Select",
+   "label": "MATRICULA",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "numid_posterior",
+   "fieldtype": "Select",
+   "label": "POSTERIOR",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "numid_izquierdo",
+   "fieldtype": "Select",
+   "label": "IZQUIERDO",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "numid_derecho",
+   "fieldtype": "Select",
+   "label": "DERECHO",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "section_break_pyrg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "colum_emergencia",
+   "fieldtype": "Column Break",
+   "label": "KIT DE EMERGENCIA"
+  },
+  {
+   "fieldname": "emerg_trian",
+   "fieldtype": "Select",
+   "label": "TRIANGULOS REFLECTIVOS",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "emerg_cono",
+   "fieldtype": "Select",
+   "label": "CONOS REFLECTIVOS",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "emerg_extin",
+   "fieldtype": "Select",
+   "label": "EXTINTOR",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "emerg_boti",
+   "fieldtype": "Select",
+   "label": "BOTIQUIN",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "colum_herramien",
+   "fieldtype": "Column Break",
+   "label": "JUEGO DE  HERRAMIENTAS"
+  },
+  {
+   "fieldname": "herra_rued",
+   "fieldtype": "Select",
+   "label": "LLAVES DE RUEDAS",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "herra_mixt",
+   "fieldtype": "Select",
+   "label": "LLAVES MIXTAS",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "herra_coro",
+   "fieldtype": "Select",
+   "label": "LLAVES DE CORONA",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "herra_boca",
+   "fieldtype": "Select",
+   "label": "LLAVES DE BOCA",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "herra_loro",
+   "fieldtype": "Select",
+   "label": "PICO DE LORO",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "herra_desto",
+   "fieldtype": "Select",
+   "label": "DESTORNILLADOR DOBLE USO",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "herra_playo",
+   "fieldtype": "Select",
+   "label": "PLAYO",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "herra_gata",
+   "fieldtype": "Select",
+   "label": "GATA",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "herra_palan",
+   "fieldtype": "Select",
+   "label": "PALANCA DE GATA",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "column_accesor",
+   "fieldtype": "Column Break",
+   "label": "ACCESORIOS"
+  },
+  {
+   "fieldname": "acce_radio",
+   "fieldtype": "Select",
+   "label": "RADIO",
+   "options": "Seleccionar\nAM/FM\nMP3\nCD\nPANTALLA TACTIL"
+  },
+  {
+   "fieldname": "acce_guant",
+   "fieldtype": "Select",
+   "label": "TAPA GUANTERA",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "acce_moque",
+   "fieldtype": "Select",
+   "label": "MOQUETAS",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "acce_parizq",
+   "fieldtype": "Select",
+   "label": "PARASOL IZQUIERDO",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "acce_pardere",
+   "fieldtype": "Select",
+   "label": "PARASOL DERECHO",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "acce_encen",
+   "fieldtype": "Select",
+   "label": "ENCENDEDOR",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "acce_ceni",
+   "fieldtype": "Select",
+   "label": "CENICERO",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "acce_ante",
+   "fieldtype": "Select",
+   "label": "ANTENA",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "acce_emble",
+   "fieldtype": "Select",
+   "label": "EMBLEMAS",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "acce_combus",
+   "fieldtype": "Select",
+   "label": "TAPA COMBUSTIBLE",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "acce_radiad",
+   "fieldtype": "Select",
+   "label": "TAPA RADIADOR",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "acce_pludere",
+   "fieldtype": "Select",
+   "label": "PLUMA DERECHA",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "acce_pluizqu",
+   "fieldtype": "Select",
+   "label": "PLUMA IZQUIERDA",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "acce_tapacei",
+   "fieldtype": "Select",
+   "label": "TAPA DE ACEITE",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "acce_bayo",
+   "fieldtype": "Select",
+   "label": "BAYONETA",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "section_break_woyy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_vidrios",
+   "fieldtype": "Column Break",
+   "label": "ELEVADOR DE VIDRIOS"
+  },
+  {
+   "fieldname": "elevid_deldere",
+   "fieldtype": "Select",
+   "label": "DELANTERO DERECHO",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "elevid_delizq",
+   "fieldtype": "Select",
+   "label": "DELANTERO IZQUIERDO",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "elevid_postdere",
+   "fieldtype": "Select",
+   "label": "POSTERIOR DERECHO",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "elevid_postizqu",
+   "fieldtype": "Select",
+   "label": "POSTERIOR IZQUIERDO",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "column_cintu",
+   "fieldtype": "Column Break",
+   "label": "CINTURONES DE SEGURIDAD"
+  },
+  {
+   "fieldname": "cintu_deldere",
+   "fieldtype": "Select",
+   "label": "DELANTERO DERECHO",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "cintu_delizqu",
+   "fieldtype": "Select",
+   "label": "DELANTERO IZQUIERDO",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "cintu_postdere",
+   "fieldtype": "Select",
+   "label": "POSTERIOR DERECHO",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "cintu_postizqu",
+   "fieldtype": "Select",
+   "label": "POSTERIOR IZQUIERDO",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "cintu_postcent",
+   "fieldtype": "Select",
+   "label": "POSTERIOR CENTRO",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "column_visores",
+   "fieldtype": "Column Break",
+   "label": "RETROVISORES"
+  },
+  {
+   "fieldname": "viso_dere",
+   "fieldtype": "Select",
+   "label": "DERECHO",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "viso_izqu",
+   "fieldtype": "Select",
+   "label": "IZQUIERDO",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "viso_inter",
+   "fieldtype": "Select",
+   "label": "INTERIOR",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "section_break_hnhr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "columm_tapiz",
+   "fieldtype": "Column Break",
+   "label": "TAPIZADO ASIENTOS"
+  },
+  {
+   "fieldname": "tapi_delan",
+   "fieldtype": "Select",
+   "label": "ASIENTOS DELANTEROS",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "tapi_post",
+   "fieldtype": "Select",
+   "label": "ASIENTO POSTERIOR",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "tapi_piso",
+   "fieldtype": "Select",
+   "label": "TAPIZADO DE PISOS",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "column_brisas",
+   "fieldtype": "Column Break",
+   "label": "ESTADO PARABRISAS\t\t"
+  },
+  {
+   "fieldname": "bris_frontal",
+   "fieldtype": "Select",
+   "label": "FRONTAL",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "bris_poster",
+   "fieldtype": "Select",
+   "label": "POSTERIOR",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "bris_puertas",
+   "fieldtype": "Select",
+   "label": "PUERTAS",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "column_faros",
+   "fieldtype": "Column Break",
+   "label": "FAROS / LUCES",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "faro_deldere",
+   "fieldtype": "Select",
+   "label": "DELANTERO DERECHO",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "faro_delizqu",
+   "fieldtype": "Select",
+   "label": " DELANTERO IZQUIERDO",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "faro_postdere",
+   "fieldtype": "Select",
+   "label": "POSTERIOR DERECHO",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "faro_postizqu",
+   "fieldtype": "Select",
+   "label": "POSTERIOR IZQUIERDO ",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "faro_nebli",
+   "fieldtype": "Select",
+   "label": "NEBLINEROS",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "faro_salon",
+   "fieldtype": "Select",
+   "label": "SALON",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "section_break_vyou",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_pintcar",
+   "fieldtype": "Column Break",
+   "label": "PINTURA CARROCERIA\t\t\t\t\t"
+  },
+  {
+   "fieldname": "pintcar_capot",
+   "fieldtype": "Select",
+   "label": "CAPOT",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "pintcar_techo",
+   "fieldtype": "Select",
+   "label": "TECHO",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "pintcar_laddere",
+   "fieldtype": "Select",
+   "label": "LADO DERECHO",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "pintcar_ladizqu",
+   "fieldtype": "Select",
+   "label": "LADO IZQUIERDO",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "pintcar_ladpost",
+   "fieldtype": "Select",
+   "label": "LADO POSTERIOR",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "pintcar_guarda",
+   "fieldtype": "Select",
+   "label": "GUARDACHOQUES",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "column_neuma",
+   "fieldtype": "Column Break",
+   "label": "LABRADO DE NEUMATICOS"
+  },
+  {
+   "fieldname": "delantero_derecho",
+   "fieldtype": "Select",
+   "label": "DELANTERO DERECHO",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "delantero_izquierdo",
+   "fieldtype": "Select",
+   "label": "DELANTERO IZQUIERDO",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "posterior_derecho",
+   "fieldtype": "Select",
+   "label": "POSTERIOR DERECHO",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "posterio_izquierdo",
+   "fieldtype": "Select",
+   "label": "POSTERIO IZQUIERDO",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "llanta_de_emergencia",
+   "fieldtype": "Select",
+   "label": "LLANTA DE EMERGENCIA",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "rin_neumaticos",
+   "fieldtype": "Select",
+   "label": "RIN NEUMATICOS",
+   "options": "Seleccionar\n225/75 R15\n230/85 R16"
+  },
+  {
+   "fieldname": "column_manij",
+   "fieldtype": "Column Break",
+   "label": "MANIJAS HABRE PUERTAS\t\t\t\t\t\t\t"
+  },
+  {
+   "fieldname": "manij_derext",
+   "fieldtype": "Select",
+   "label": "DERECHA EXTERNA",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "manij_derinter",
+   "fieldtype": "Select",
+   "label": "DERECHA INTERNA",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "manij_izquexte",
+   "fieldtype": "Select",
+   "label": "IZQUIERDA EXTERNA",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "manij_izquinter",
+   "fieldtype": "Select",
+   "label": "IZQUIERDA INTERNA",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "manij_postderext",
+   "fieldtype": "Select",
+   "label": "POST DERECHA EXTERNA",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "manij_postdereint",
+   "fieldtype": "Select",
+   "label": "POST DERECHA INTERNA",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "manij_postizquext",
+   "fieldtype": "Select",
+   "label": "POST IZQUIERDA EXTERNA",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "manij_postizqinte",
+   "fieldtype": "Select",
+   "label": "POST IZQUIERDA INTERNA",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "manij_postcaj",
+   "fieldtype": "Select",
+   "label": "PUERTA CAJON",
+   "options": "BUENO\nMALO\nREGULAR"
+  },
+  {
+   "fieldname": "column_break_yyxt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_roam",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hnvg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ncdd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_uivu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "observaciones",
+   "fieldtype": "Small Text",
+   "label": "OBSERVACIONES"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-19 19:05:54.072696",
+ "modified_by": "Administrator",
+ "module": "Registro vehiculo",
+ "name": "Revision Vehicular",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
