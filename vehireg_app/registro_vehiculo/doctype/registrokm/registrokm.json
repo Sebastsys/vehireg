@@ -42,12 +42,14 @@
   {
    "fieldname": "fecha_salida",
    "fieldtype": "Date",
-   "label": "Fecha Salida"
+   "label": "Fecha Salida",
+   "read_only": 1
   },
   {
    "fieldname": "hora_salida",
    "fieldtype": "Time",
-   "label": "Hora Salida"
+   "label": "Hora Salida",
+   "read_only": 1
   },
   {
    "fieldname": "kilometraje_salida",
@@ -61,12 +63,14 @@
   {
    "fieldname": "fecha_ingreso",
    "fieldtype": "Date",
-   "label": "Fecha Ingreso"
+   "label": "Fecha Ingreso",
+   "read_only": 0
   },
   {
    "fieldname": "hora_ingreso",
    "fieldtype": "Time",
-   "label": "Hora Ingreso"
+   "label": "Hora Ingreso",
+   "read_only": 0
   },
   {
    "fieldname": "kilometraje_ingreso",
@@ -76,7 +80,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-18 01:17:54.612616",
+ "modified": "2025-02-19 22:54:02.894134",
  "modified_by": "Administrator",
  "module": "Registro vehiculo",
  "name": "RegistroKM",

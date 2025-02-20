@@ -5,6 +5,11 @@ app_description = "Registro de entrada y salida de vehiculos"
 app_email = "davidalulema0888@gmail.com"
 app_license = "mit"
 
+# Configuración de CORS
+override_whitelisted_methods = {
+    "OPTIONS": "frappe.desk.api.allow_cors"
+}
+
 # Apps
 # ------------------
 
