@@ -3,6 +3,12 @@
 
 frappe.ui.form.on("RegistroKM", {
     onload: function(frm) {
+        frappe.require("https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js", function() {
+            // El script se ha cargado, puedes usarlo aquí
+            frm.add_custom_button(__('Leer QR'), function() {
+                abrirCamara(frm);
+            });
+        });
         // Establecer fecha y hora de salida al cargar el formulario
         if (!frm.doc.fecha_salida) {
             frm.set_value('fecha_salida', frappe.datetime.get_today());
@@ -61,7 +67,43 @@ frappe.ui.form.on("RegistroKM", {
             frm.set_df_property('fecha_salida', 'read_only', 1);
             frm.set_df_property('hora_salida', 'read_only', 1);
         }
+    },
+    refresh: function(frm) {
+        frm.fields_dict['vehiculo'].$input.after('<div id="reader" style="width: 100px; height: 100px;display: none;"></div>');
+
+        frm.add_custom_button(__('Leer QR'), function() {
+            abrirCamara(frm);
+        });
     }
 
 
 });
+function abrirCamara(frm) {
+    const html5QrCode = new Html5Qrcode("reader");
+    const readerDiv = document.getElementById("reader");
+    
+    // Hacer visible el div al iniciar la cámara
+    readerDiv.style.display = "block";
+
+    html5QrCode.start(
+        { facingMode: "environment" }, // Usa la cámara trasera
+        {
+            fps: 10,
+            qrbox: 250
+        },
+        (decodedText, decodedResult) => {
+            console.log(`Código QR leído: ${decodedText}`);
+            // Aquí actualizas el campo de tipo Data en el Doctype
+            //frappe.model.set_value('RegistroKM', frm.docname, 'kilometraje_ingreso', decodedText);
+            //frappe.model.set_value('RegistroKM', frm.docname, 'vehiculo', decodedText);
+            frm.set_value('vehiculo', decodedText);
+            readerDiv.style.display = "none";
+            html5QrCode.stop().then(ignore => {}).catch(err => {});
+        },
+        (errorMessage) => {
+            console.log(`Error: ${errorMessage}`);
+        })
+    .catch(err => {
+        console.log(`Error al iniciar la cámara: ${err}`);
+    });
+}
