@@ -44,12 +44,12 @@
    "fieldname": "tipo_licencia",
    "fieldtype": "Select",
    "label": "Tipo licencia",
-   "options": "\nE\nB\nD\nC"
+   "options": "G\nF\nE\nD\nC1\nC\nB\nA"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-18 12:15:31.877748",
+ "modified": "2025-07-28 11:16:01.427509",
  "modified_by": "Administrator",
  "module": "Registro vehiculo",
  "name": "Conductor",
