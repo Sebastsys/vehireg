@@ -5,6 +5,10 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "vehiculo",
+  "column_break_wgdj",
+  "conductor",
+  "section_break_aimp",
   "documentos_column",
   "docs_sticker",
   "docs_matricula",
@@ -715,11 +719,39 @@
    "fieldname": "observaciones",
    "fieldtype": "Small Text",
    "label": "OBSERVACIONES"
+  },
+  {
+   "fieldname": "vehiculo",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Veh\u00edculo",
+   "options": "Vehiculo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wgdj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "conductor",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Conductor",
+   "options": "Conductor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_aimp",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-19 19:05:54.072696",
+ "modified": "2025-08-07 09:55:27.580461",
  "modified_by": "Administrator",
  "module": "Registro vehiculo",
  "name": "Revision Vehicular",
