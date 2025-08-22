@@ -68,6 +68,7 @@
   "limpieza_cumple",
   "section_break_frkw",
   "mi_adjunto_imagen",
+  "observaciones",
   "column_break_otuw",
   "tacometro",
   "nivel_combustible"
@@ -450,11 +451,16 @@
    "fieldtype": "Select",
    "label": "Nivel Combustible",
    "options": "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12"
+  },
+  {
+   "fieldname": "observaciones",
+   "fieldtype": "Small Text",
+   "label": "Observaciones"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-22 15:48:40.364405",
+ "modified": "2025-08-22 16:42:26.611437",
  "modified_by": "Administrator",
  "module": "Registro vehiculo",
  "name": "ActaER",
