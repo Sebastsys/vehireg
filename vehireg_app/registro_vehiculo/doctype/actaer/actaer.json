@@ -1,0 +1,479 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-22 10:14:16.122699",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "placa",
+  "marca",
+  "modelo",
+  "numero_vehiculo",
+  "column_break_xlps",
+  "color",
+  "tipo_combustible",
+  "matricula",
+  "kilometraje",
+  "column_break_xxcb",
+  "conductor",
+  "nombres",
+  "apellidos",
+  "tipo_licencia",
+  "caducidad_licencia",
+  "column_break_cfkf",
+  "conductor_recibe",
+  "nombres_recibe",
+  "apellidos_recibe",
+  "section_break_juft",
+  "plumas",
+  "aspersores",
+  "retrovisores",
+  "faros_luces",
+  "guardachoques",
+  "antena",
+  "llanta_emergencia",
+  "tapa_radiador",
+  "tapa_gasolina",
+  "tapa_aceite",
+  "tapa_cubos",
+  "guardalodos",
+  "guardafangos",
+  "placas",
+  "column_break_ookr",
+  "radio",
+  "cenicero",
+  "encendedor",
+  "moquetas",
+  "cubre_tablero",
+  "luz_salon",
+  "cinturones_seguridad",
+  "forros_asiento",
+  "palanca_cambio",
+  "cauchos_pedales",
+  "botiquin",
+  "extintor",
+  "triangulos_seguridad",
+  "column_break_rhrs",
+  "gata",
+  "palanca_gata",
+  "llave_ruedas",
+  "destornillador_plano",
+  "destornillador_estrella",
+  "alicate",
+  "llave_boca",
+  "llave_bujias",
+  "slct_matricula",
+  "revision_vehicular",
+  "plan_mantenimiento",
+  "limpieza_cumple",
+  "section_break_frkw",
+  "mi_adjunto_imagen",
+  "column_break_otuw",
+  "tacometro",
+  "nivel_combustible"
+ ],
+ "fields": [
+  {
+   "fieldname": "placa",
+   "fieldtype": "Link",
+   "label": "PLACA",
+   "options": "Vehiculo"
+  },
+  {
+   "fetch_from": "placa.marca",
+   "fieldname": "marca",
+   "fieldtype": "Read Only",
+   "label": "MARCA"
+  },
+  {
+   "fetch_from": "placa.color",
+   "fieldname": "color",
+   "fieldtype": "Read Only",
+   "label": "COLOR"
+  },
+  {
+   "fetch_from": "placa.modelo",
+   "fieldname": "modelo",
+   "fieldtype": "Read Only",
+   "label": "MODELO"
+  },
+  {
+   "fieldname": "column_break_xlps",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "placa.tipo_combustible",
+   "fieldname": "tipo_combustible",
+   "fieldtype": "Read Only",
+   "label": "TIPO COMBUSTIBLE"
+  },
+  {
+   "fieldname": "column_break_xxcb",
+   "fieldtype": "Column Break",
+   "label": "ENTREGA"
+  },
+  {
+   "fetch_from": "placa.matricula",
+   "fieldname": "matricula",
+   "fieldtype": "Read Only",
+   "label": "MATRICULA"
+  },
+  {
+   "fieldname": "kilometraje",
+   "fieldtype": "Data",
+   "label": "KILOMETRAJE"
+  },
+  {
+   "fieldname": "conductor",
+   "fieldtype": "Link",
+   "label": "CONDUCTOR",
+   "options": "Conductor"
+  },
+  {
+   "fetch_from": "conductor.nombres",
+   "fieldname": "nombres",
+   "fieldtype": "Read Only",
+   "label": "NOMBRES"
+  },
+  {
+   "fetch_from": "conductor.apellidos",
+   "fieldname": "apellidos",
+   "fieldtype": "Read Only",
+   "label": "APELLIDOS"
+  },
+  {
+   "fetch_from": "conductor.tipo_licencia",
+   "fieldname": "tipo_licencia",
+   "fieldtype": "Read Only",
+   "label": "TIPO LICENCIA"
+  },
+  {
+   "fetch_from": "conductor.caducidad_licencia",
+   "fieldname": "caducidad_licencia",
+   "fieldtype": "Read Only",
+   "label": "CADUCIDAD LICENCIA"
+  },
+  {
+   "fieldname": "column_break_cfkf",
+   "fieldtype": "Column Break",
+   "label": "RECIBE"
+  },
+  {
+   "fieldname": "conductor_recibe",
+   "fieldtype": "Link",
+   "label": "CONDUCTOR",
+   "options": "Conductor"
+  },
+  {
+   "fetch_from": "conductor_recibe.nombres",
+   "fieldname": "nombres_recibe",
+   "fieldtype": "Read Only",
+   "label": "NOMBRES"
+  },
+  {
+   "fetch_from": "conductor_recibe.apellidos",
+   "fieldname": "apellidos_recibe",
+   "fieldtype": "Read Only",
+   "label": "APELLIDOS"
+  },
+  {
+   "fieldname": "section_break_juft",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "plumas",
+   "fieldtype": "Select",
+   "label": "PLUMAS",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "aspersores",
+   "fieldtype": "Select",
+   "label": "ASPERSORES",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "column_break_ookr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rhrs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "placa.numero_vehiculo",
+   "fieldname": "numero_vehiculo",
+   "fieldtype": "Read Only",
+   "label": "NUMERO"
+  },
+  {
+   "fieldname": "guardachoques",
+   "fieldtype": "Select",
+   "label": "GUARDACHOQUES",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "antena",
+   "fieldtype": "Select",
+   "label": "ANTENA",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "guardalodos",
+   "fieldtype": "Select",
+   "label": "GUARDALODOS",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "guardafangos",
+   "fieldtype": "Select",
+   "label": "GUARDAFANGOS",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "placas",
+   "fieldtype": "Select",
+   "label": "PLACAS",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "radio",
+   "fieldtype": "Select",
+   "label": "RADIO",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "cenicero",
+   "fieldtype": "Select",
+   "label": "CENICERO",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "encendedor",
+   "fieldtype": "Select",
+   "label": "ENCENDEDOR",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "moquetas",
+   "fieldtype": "Select",
+   "label": "MOQUETAS",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "cubre_tablero",
+   "fieldtype": "Select",
+   "label": "CUBRE TABLERO",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "botiquin",
+   "fieldtype": "Select",
+   "label": "BOTIQUIN",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "extintor",
+   "fieldtype": "Select",
+   "label": "EXTINTOR",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "gata",
+   "fieldtype": "Select",
+   "label": "GATA",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "destornillador_plano",
+   "fieldtype": "Select",
+   "label": "DESTORNILLADOR PLANO",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "destornillador_estrella",
+   "fieldtype": "Select",
+   "label": "DESTORNILLADOR ESTRELLA",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "retrovisores",
+   "fieldtype": "Select",
+   "label": "RETROVISOR",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "faros_luces",
+   "fieldtype": "Select",
+   "label": "FOCOS DELANTEROS",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "llanta_emergencia",
+   "fieldtype": "Select",
+   "label": "LLANTA DE EMERGENCIA",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "tapa_radiador",
+   "fieldtype": "Select",
+   "label": "TAPA DE RADIADOR",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "tapa_gasolina",
+   "fieldtype": "Select",
+   "label": "TAPA DE GASOLINA",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "tapa_aceite",
+   "fieldtype": "Select",
+   "label": "TAPA DE ACEITE",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "tapa_cubos",
+   "fieldtype": "Select",
+   "label": "TAPACUBOS",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "luz_salon",
+   "fieldtype": "Select",
+   "label": "LUZ DE SALON",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "cinturones_seguridad",
+   "fieldtype": "Select",
+   "label": "CINTURON DE SEGURIDAD",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "forros_asiento",
+   "fieldtype": "Select",
+   "label": "FORROS DE ASIENTOS",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "palanca_cambio",
+   "fieldtype": "Select",
+   "label": "PALANCA DE CAMBIO",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "cauchos_pedales",
+   "fieldtype": "Select",
+   "label": "CAUCHOS DE PEDALES",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "triangulos_seguridad",
+   "fieldtype": "Select",
+   "label": "TRIANGULOS",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "palanca_gata",
+   "fieldtype": "Select",
+   "label": "PALANCA DE GATA",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "llave_ruedas",
+   "fieldtype": "Select",
+   "label": "LLAVE DE RUEDAS",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "alicate",
+   "fieldtype": "Select",
+   "label": "PLAYO",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "llave_boca",
+   "fieldtype": "Select",
+   "label": "LLAVE DE BOCA",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "llave_bujias",
+   "fieldtype": "Select",
+   "label": "LLAVE DE BUJIAS",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "revision_vehicular",
+   "fieldtype": "Select",
+   "label": "REVISION",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "plan_mantenimiento",
+   "fieldtype": "Select",
+   "label": "PLAN DE MANTENIMIENTO",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "limpieza_cumple",
+   "fieldtype": "Select",
+   "label": "LIMPIEZA DE LA UNIDAD",
+   "options": "SI CUMPLE\nNO CUMPLE"
+  },
+  {
+   "fieldname": "slct_matricula",
+   "fieldtype": "Select",
+   "label": "Matricula",
+   "options": "SI TIENE\nNO TIENE"
+  },
+  {
+   "fieldname": "section_break_frkw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "mi_adjunto_imagen",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "column_break_otuw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tacometro",
+   "fieldtype": "HTML",
+   "label": "tacometro"
+  },
+  {
+   "fieldname": "nivel_combustible",
+   "fieldtype": "Select",
+   "label": "Nivel Combustible",
+   "options": "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-22 15:48:40.364405",
+ "modified_by": "Administrator",
+ "module": "Registro vehiculo",
+ "name": "ActaER",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -6,8 +6,20 @@
  "engine": "InnoDB",
  "field_order": [
   "vehiculo",
+  "marca",
+  "modelo",
+  "numero_vehiculo",
   "column_break_wgdj",
+  "kilometraje",
+  "color",
+  "tipo_combustible",
+  "matricula",
+  "column_break_zirc",
   "conductor",
+  "apellidos",
+  "nombres",
+  "tipo_licencia",
+  "caducidad_licencia",
   "section_break_aimp",
   "documentos_column",
   "docs_sticker",
@@ -634,7 +646,7 @@
    "fieldname": "rin_neumaticos",
    "fieldtype": "Select",
    "label": "RIN NEUMATICOS",
-   "options": "Seleccionar\n225/75 R15\n230/85 R16"
+   "options": "Seleccionar\n225/70 R15\n230/85 R16\n265/65 R17\n425/65 R22.5\n3.50 16MC RENIF 58P\n295/80 R22.5 152/148K\n11R22.5 148/145K\n700-15\n750-16"
   },
   {
    "fieldname": "column_manij",
@@ -747,11 +759,82 @@
   {
    "fieldname": "section_break_aimp",
    "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "vehiculo.numero_vehiculo",
+   "fieldname": "numero_vehiculo",
+   "fieldtype": "Read Only",
+   "label": "Numero Vehiculo"
+  },
+  {
+   "fetch_from": "vehiculo.marca",
+   "fieldname": "marca",
+   "fieldtype": "Read Only",
+   "label": "Marca"
+  },
+  {
+   "fetch_from": "vehiculo.modelo",
+   "fieldname": "modelo",
+   "fieldtype": "Read Only",
+   "label": "Modelo"
+  },
+  {
+   "fetch_from": "vehiculo.color",
+   "fieldname": "color",
+   "fieldtype": "Read Only",
+   "label": "Color"
+  },
+  {
+   "fetch_from": "conductor.apellidos",
+   "fieldname": "apellidos",
+   "fieldtype": "Read Only",
+   "label": "Apellidos"
+  },
+  {
+   "fetch_from": "conductor.nombres",
+   "fieldname": "nombres",
+   "fieldtype": "Read Only",
+   "label": "Nombres"
+  },
+  {
+   "fetch_from": "conductor.tipo_licencia",
+   "fieldname": "tipo_licencia",
+   "fieldtype": "Read Only",
+   "label": "Tipo Licencia"
+  },
+  {
+   "fetch_from": "conductor.caducidad_licencia",
+   "fieldname": "caducidad_licencia",
+   "fieldtype": "Date",
+   "label": "Caducidad Licencia",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kilometraje",
+   "fieldtype": "Data",
+   "label": "Kilometraje",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zirc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "vehiculo.tipo_combustible",
+   "fieldname": "tipo_combustible",
+   "fieldtype": "Read Only",
+   "label": "Tipo Combustible"
+  },
+  {
+   "fetch_from": "vehiculo.matricula",
+   "fieldname": "matricula",
+   "fieldtype": "Read Only",
+   "label": "Matricula"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-07 09:55:27.580461",
+ "modified": "2025-08-22 14:23:09.122931",
  "modified_by": "Administrator",
  "module": "Registro vehiculo",
  "name": "Revision Vehicular",
@@ -773,5 +856,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
+ "title_field": "vehiculo",
  "track_changes": 1
 }

@@ -8,26 +8,35 @@
  "field_order": [
   "placa",
   "numero_vehiculo",
-  "column_break_vwht",
   "marca",
-  "modelo"
+  "tipo_combustible",
+  "column_break_vwht",
+  "modelo",
+  "color",
+  "matricula"
  ],
  "fields": [
   {
    "fieldname": "placa",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Placa",
+   "reqd": 1,
    "unique": 1
   },
   {
    "fieldname": "numero_vehiculo",
    "fieldtype": "Data",
-   "label": "Numero Vehiculo"
+   "in_list_view": 1,
+   "label": "Numero Vehiculo",
+   "reqd": 1
   },
   {
    "fieldname": "marca",
    "fieldtype": "Data",
-   "label": "Marca"
+   "in_list_view": 1,
+   "label": "Marca",
+   "reqd": 1
   },
   {
    "fieldname": "modelo",
@@ -37,11 +46,30 @@
   {
    "fieldname": "column_break_vwht",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Data",
+   "label": "Color",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tipo_combustible",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Tipo Combustible",
+   "options": "SUPER\nEXTRA\nDIESEL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "matricula",
+   "fieldtype": "Data",
+   "label": "Matricula"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-14 15:18:43.733141",
+ "modified": "2025-08-20 11:39:20.405608",
  "modified_by": "Administrator",
  "module": "Registro vehiculo",
  "name": "Vehiculo",
